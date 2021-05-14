@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Proposition
+{% endblock %}
+
+{% block body %}
+
+	{% include '_partials/_flash_messages.html.twig' %}
+
+
+	<main class="">
+
+		<div class="row">
+			<div class="col bg-white mb-4 shadow-sm">
+				<h1>Tu souhaites faire une proposition</h1>
+
+				<p>C'est ici qu'il faut le poster</p>
+
+
+				<table class="table table-lg table-stripped table-hover mt-4">
+					<thead class="" style="background-color: #393939; color: white;">
+						<tr class="">
+							<th scope="col">Prénom</th>
+							<th scope="col">Ville</th>
+							<th scope="col">Date</th>
+							<th scope="col">Remarques</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for proposition in propositionList %}
+							<tr>
+								<td>{{ proposition.firstname }}</td>
+								<td>{{ proposition.city }}</td>
+								<td>{{ proposition.date | date('d/m/Y') }}</td>
+								<td>{{ proposition.note }}</td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+
+
+			</div>
+		</div>
+
+
+		{# TODO FORM #}
+
+		<div class="row">
+			<div class="col">
+
+                <div class="card shadow-sm">
+                    {{ form_start(formProposition) }}
+                    <button type="submit">J'envoie la sauce</button>
+                    {{ form_end(formProposition) }}            
+                </div>
+			</div>
+		</div>
+
+
+	</main>
+
+{% endblock %}
