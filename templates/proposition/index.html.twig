@@ -48,9 +48,29 @@
 		<div class="row">
 			<div class="col">
 
-                <div class="card shadow-sm">
+                <div class="card shadow-sm p-3">
                     {{ form_start(formProposition) }}
-                    <button type="submit">J'envoie la sauce</button>
+
+                    <div class="row">
+                        <div class="col">
+                             {{ form_row(formProposition.firstname) }}
+                        </div>
+                        <div class="col">
+                            {{ form_row(formProposition.city) }}
+                        </div>
+                        <div class="col">
+                            {{ form_row(formProposition.date) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            {{ form_row(formProposition.note) }}
+                        </div>
+                    </div>
+                    <div class="text-center my-3">
+                        <button type="submit" class="btn btn-primary">J'envoie la sauce</button>
+                    </div>
+
                     {{ form_end(formProposition) }}            
                 </div>
 			</div>

@@ -1,23 +1,74 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Inscription{% endblock %}
+{% block title %}Inscription
+{% endblock %}
 
 {% block body %}
 
-{% include '_partials/_flash_messages.html.twig' %}
+	{% include '_partials/_flash_messages.html.twig' %}
 
- <main class="position-absolute top-50 start-50 translate-middle p-2 bg-body rounded">
+	<main class="">
 
-    <h1>Commençons par le début</h1>
- 
-    <div class="card shadow">
+		<h1 class="text-center mb-5 text-black fw-bold">Commençons par le début</h1>
 
-    {{ form_start(form) }}
-        <button class='' type='submit'>envoyer</button>
-    {{ form_end(form) }}
+		<div class="row">
+			<div class="col">
+				<div class="card shadow-lg rounded p-4">
 
-    </div>
+					{{ form_start(form) }}
+                    <div class="row mb-3">
+                        <div class="col">
+                            {{ form_row(form.firstname)}}
+                        </div>
+                        <div class="col">
+                            {{ form_row(form.lastname)}}
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            {{ form_row(form.email)}}
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            {{ form_row(form.phone)}}
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            {{ form_row(form.adress)}}
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            {{ form_row(form.cp)}}
+                        </div>
+                        <div class="col">
+                            {{ form_row(form.city)}}
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            {{ form_row(form.department)}}
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            {{ form_row(form.note)}}
+                        </div>
+                    </div>
+                    <div class="my-3 text-center">
+					    <button class="btn btn-primary px-5" type='submit'>envoyer</button>
+                    </div>
+					{{ form_end(form) }}
 
-</main>
+
+				</div>
+			</div>
+
+
+		</div>
+
+	</main>
 
 {% endblock %}
