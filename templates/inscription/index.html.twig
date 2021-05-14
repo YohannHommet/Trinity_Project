@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello InscriptionController!{% endblock %}
+
+{% block body %}
+
+{% include '_partials/_flash_messages.html.twig' %}
+
+ <main class="position-absolute top-50 start-50 translate-middle p-2 bg-body rounded">
+
+    <h1>Commençons par le début</h1>
+ 
+    <div class="card shadow">
+
+    {{ form_start(form) }}
+        <button type='submit'>envoyer</button>
+    {{ form_end(form) }}
+
+    </div>
+
+</main>
+
+{% endblock %}
