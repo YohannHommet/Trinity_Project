@@ -22,6 +22,7 @@ class InscriptionsRepository extends ServiceEntityRepository
     // /**
     //  * @return Inscriptions[] Returns an array of Inscriptions objects
     //  */
+    
     /*
     public function findByExampleField($value)
     {
@@ -33,8 +34,8 @@ class InscriptionsRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult()
         ;
-    }
-    */
+    }*/
+    
 
     
     // public function findOneBySomeField($value): ?Inscriptions

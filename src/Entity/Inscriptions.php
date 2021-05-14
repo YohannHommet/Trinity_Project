@@ -32,7 +32,7 @@ class Inscriptions
     /**
      * @ORM\Column(type="boolean", nullable=true)
      */
-    private $isOk = false;
+    private $isOk;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true, unique=true)

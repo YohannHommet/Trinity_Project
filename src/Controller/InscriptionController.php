@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Inscriptions;
 use App\Form\InscriptionsType;
+use App\Repository\InscriptionsRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -13,7 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class InscriptionController extends AbstractController
 {
     /**
-     * @Route("/inscription", name="app_inscription")
+     * @Route("/inscription", name="app_inscription", methods={"GET|POST"})
      */
     public function index(Request $request, EntityManagerInterface $em): Response
     {
@@ -40,12 +41,15 @@ class InscriptionController extends AbstractController
 
 
     /**
-     * @Route("/details", name="app_detail")
+     * @Route("/listing", name="app_listing", methods={"GET"})
      */
-    public function detail(): Response
+    public function listing(InscriptionsRepository $inscriptionsRepository): Response
     {
+        $list = $inscriptionsRepository->findAll();
 
-        return $this->render('inscription/index.html.twig', []);
+        return $this->render('inscription/listing.html.twig', [
+            'list' => $list
+        ]);
     }
 
 
