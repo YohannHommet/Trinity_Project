@@ -4,7 +4,6 @@ namespace App\Entity;
 
 use App\Repository\InscriptionsRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=InscriptionsRepository::class)
@@ -16,18 +15,17 @@ class Inscriptions
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private $id;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     * @Assert\NotBlank(message="Champ requis")
-     */
-    private $firstname;
+    private ?int $id;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $lastname;
+    private ?string $firstname;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private ?string $lastname;
 
     /**
      * @ORM\Column(type="boolean", nullable=true)
