@@ -1,9 +1,3 @@
-AuthName "Page d'administration protégée"
-AuthType Basic
-AuthUserFile "..\hpwd\.htpasswd"
-Require valid-user
-Loading complete
-
 DirectoryIndex index.php
 
 <IfModule mod_negotiation.c>
@@ -34,3 +28,10 @@ DirectoryIndex index.php
         # RedirectTemp cannot be used instead
     </IfModule>
 </IfModule>
+
+#
+#AuthName "Page d'administration protégée"
+#AuthType Basic
+#AuthUserFile "..\hpwd\.htpasswd"
+#Require valid-user
+#Loading complete

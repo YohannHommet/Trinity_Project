@@ -76,7 +76,12 @@
     },
     "scripts": {
         "auto-scripts": {
-            "cache:clear": "symfony-cmd",
+            "database-setup":
+                "php bin/console doctrine:migrations:migrate --no-interaction",
+                "php bin/console doctrine:fixtures:load --no-interaction",
+            "post-install-cmd":
+                "@database-setup",
+            "cache:clear",: "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
         "post-install-cmd": [
