@@ -29,9 +29,9 @@ DirectoryIndex index.php
     </IfModule>
 </IfModule>
 
-#
-#AuthName "Page d'administration protégée"
-#AuthType Basic
-#AuthUserFile "..\hpwd\.htpasswd"
-#Require valid-user
-#Loading complete
+
+AuthName "Page d'administration protégée"
+AuthType Basic
+AuthUserFile "..\hpwd\.htpasswd"
+Require valid-user
+Loading complete
