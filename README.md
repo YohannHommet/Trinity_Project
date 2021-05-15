@@ -2,6 +2,6 @@
 
 
 
-*Project owners : Jonathan Turpin, Aodrën LACOT LE CLANCHE, Yohann Hommet.*
+*Project owners : Jonathan Turpin, Aodrën Lacot Le Clanche, Yohann Hommet.*
 
 *This project is licensed under the terms of the MIT license.*  
