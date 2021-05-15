@@ -30,8 +30,8 @@ DirectoryIndex index.php
 </IfModule>
 
 
-#AuthName "Page d'administration protégée"
-#AuthType Basic
-#AuthUserFile "\public\hpwd\.htpasswd"
-#Require valid-user
-#Loading complete
+AuthName "Page d'administration protégée"
+AuthType Basic
+AuthUserFile "\app\public\hpwd\.htpasswd"
+Require valid-user
+Loading complete
