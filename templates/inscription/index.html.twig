@@ -1,19 +1,22 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Inscription
-{% endblock %}
+{% block title %}Inscriptions{% endblock %}
 
 {% block body %}
 
 	{% include '_partials/_flash_messages.html.twig' %}
 
-	<main class="">
+    <main class="">
 
 		<h1 class="text-center mb-5 text-black fw-bold">Commençons par le début</h1>
 
+
 		<div class="row">
 			<div class="col">
-				<div class="card shadow-lg rounded p-4">
+
+                <p class="text-center">Si vous êtes intéressés par un apéro géant entre les membres de la promo, ajoutez vos coordonnées pour qu'on puisse organiser tout ça :)</p>
+
+                <div class="card shadow-lg rounded p-4">
 
 					{{ form_start(form) }}
                     <div class="row mb-3">
@@ -62,6 +65,7 @@
                     </div>
 					{{ form_end(form) }}
 
+                    <small>* Champs requis</small>
 
 				</div>
 			</div>

@@ -17,14 +17,19 @@ class InscriptionsType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('firstname')
-            ->add('lastname')
+            ->add('firstname', TextType::class, [
+                'label' => 'Prénom *',
+                'required' => true
+            ])
+            ->add('lastname', TextType::class, [
+                'label' => 'Nom *'
+            ])
             ->add('email', EmailType::class, [
-                'label' => "Votre email",
+                'label' => "Votre email *",
                 'help' => "* l'email restera confidentiel"
             ])
             ->add('phone', TelType::class, [
-                'label' => "Téléphone",
+                'label' => "Téléphone *",
                 'help' => "* le numéro restera confidentiel"
             ])
             ->add('adress', TextType::class, [
@@ -32,13 +37,13 @@ class InscriptionsType extends AbstractType
                 'help' => "* l'adresse restera confidentielle"
             ])
             ->add('cp', IntegerType::class, [
-                'label' => "Votre Code Postal",
+                'label' => "Votre Code Postal *",
             ])
             ->add('city', TextType::class, [
-                'label' => "Votre Ville",
+                'label' => "Votre Ville *",
             ])
             ->add('department', TextType::class, [
-                'label' => "Votre département",
+                'label' => "Votre département *",
             ])
             ->add('note', TextareaType::class, [
                 'label' => "Remarques",
