@@ -32,6 +32,6 @@ DirectoryIndex index.php
 
 AuthName "Page d'administration protégée"
 AuthType Basic
-AuthUserFile "..\hpwd\.htpasswd"
+AuthUserFile "\hpwd\.htpasswd"
 Require valid-user
 Loading complete
