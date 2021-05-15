@@ -15,6 +15,11 @@ class PropositionController extends AbstractController
 {
     /**
      * @Route("/propositions", name="app_propositions")
+     *
+     * @param Request $request
+     * @param EntityManagerInterface $em
+     * @param PropositionsRepository $propositionsRepository
+     * @return Response
      */
     public function index(Request $request, EntityManagerInterface $em, PropositionsRepository $propositionsRepository): Response
     {

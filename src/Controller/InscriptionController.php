@@ -15,6 +15,10 @@ class InscriptionController extends AbstractController
 {
     /**
      * @Route("/inscription", name="app_inscription", methods={"GET|POST"})
+     *
+     * @param Request $request
+     * @param EntityManagerInterface $em
+     * @return Response
      */
     public function index(Request $request, EntityManagerInterface $em): Response
     {
@@ -29,7 +33,7 @@ class InscriptionController extends AbstractController
             $em->flush();
 
             $this->addFlash('info', 'Merci de ton inscription');
-            return $this->redirect("/");
+            return $this->redirect("/inscription");
         }
 
 
@@ -42,6 +46,8 @@ class InscriptionController extends AbstractController
 
     /**
      * @Route("/listing", name="app_listing", methods={"GET"})
+     * @param InscriptionsRepository $inscriptionsRepository
+     * @return Response
      */
     public function listing(InscriptionsRepository $inscriptionsRepository): Response
     {
