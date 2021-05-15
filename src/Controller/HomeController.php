@@ -14,6 +14,7 @@ class HomeController extends AbstractController
      */
     public function index(): Response
     {
+        echo realpath('index.php');
         return $this->render('home/index.html.twig', []);
     }
 }
