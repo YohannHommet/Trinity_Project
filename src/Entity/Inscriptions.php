@@ -16,58 +16,64 @@ class Inscriptions
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private $id;
+    private ?int $id;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @Assert\NotBlank(message="Champ requis")
+     * @Assert\NotBlank()
      */
-    private $firstname;
+    private ?string $firstname;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\NotBlank()
      */
-    private $lastname;
+    private ?string $lastname;
 
     /**
      * @ORM\Column(type="boolean", nullable=true)
      */
-    private $isOk;
+    private $isOk = null;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true, unique=true)
+     * @Assert\NotBlank()
      */
-    private $email;
+    private ?string $email;
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank()
      */
-    private $phone;
+    private ?int $phone;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $adress;
+    private ?string $adress;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
+     * @Assert\NotBlank()
      */
-    private $cp;
+    private ?int $cp;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\NotBlank()
      */
-    private $city;
+    private ?string $city;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\NotBlank()
      */
-    private $department;
+    private ?string $department;
 
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    private $note;
+    private ?string $note;
 
     
 
