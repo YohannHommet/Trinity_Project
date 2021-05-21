@@ -13,12 +13,12 @@
         
         <title>{% block title %}Welcome Trinity !{% endblock %}</title>
     </head>
-    <body style="background-image: url(img/background.jpg);background-repeat: no-repeat; background-size: cover;">
+    <body>
 
         {% include "_partials/_navbar.html.twig" %}
 
         <div class="container-fluid p-0 m-0 g-0">
-            <main role="main">
+            <main role="main" id="main">
                 {% block body %}
                 {% endblock %}
             </main>
