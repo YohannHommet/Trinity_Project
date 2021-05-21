@@ -1,16 +1,46 @@
-<button class="btn m-3 btn-dark " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop" style="width: 10em; height: 4em;">MENU</button>
+{#<button class="btn m-3 btn-dark " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop" style="width: 10em; height: 4em;">MENU</button>#}
 
-<div class="offcanvas offcanvas-top bg-dark bg-gradient" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="max-height: 5.2em;">
-	<div class="offcanvas-body ">
-		<nav class="nav nav-pills nav-fill">
-			<a class="nav-link text-light" aria-current="page" href="{{ path('app_home') }}">Accueil</a>
-			<a class="nav-link text-light" href="{{ path('app_inscription') }}">Qui veut ?</a>
-			<a class="nav-link text-light" href="{{ path('app_listing') }}">Listing</a>
-			<a class="nav-link text-light" href="{{ path('app_organisation') }}">Organisation</a>
-			<a class="nav-link text-light" href="{{ path('app_propositions') }}">Propositions</a>
-			{# <a class="nav-link text-light" href="vote.html">Votes</a>
-			<a class="nav-link text-light" href="organisation.html">Organisation retenue</a>
-			<a class="nav-link text-light" href="share.html">Partagez</a> #}
-		</nav>
+{#<div class="offcanvas offcanvas-top bg-dark bg-gradient" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="max-height: 5.2em;">#}
+{#	<div class="offcanvas-body ">#}
+{#		<nav class="nav nav-pills nav-fill">#}
+{#			<a class="nav-link text-light" aria-current="page" href="{{ path('app_home') }}">Accueil</a>#}
+{#			<a class="nav-link text-light" href="{{ path('app_inscription') }}">Qui veut ?</a>#}
+{#			<a class="nav-link text-light" href="{{ path('app_listing') }}">Listing</a>#}
+{#			<a class="nav-link text-light" href="{{ path('app_organisation') }}">Organisation</a>#}
+{#			<a class="nav-link text-light" href="{{ path('app_propositions') }}">Propositions</a>#}
+{#			#}{# <a class="nav-link text-light" href="vote.html">Votes</a>#}
+{#			<a class="nav-link text-light" href="organisation.html">Organisation retenue</a>#}
+{#			<a class="nav-link text-light" href="share.html">Partagez</a> #}
+{#		</nav>#}
+{#	</div>#}
+{#</div>#}
+
+
+<nav class="navbar navbar-expand-fluid fixed-top navbar-dark bg-dark">
+	<div class="container-fluid px-3">
+
+		<a class="navbar-brand" href="{{ path('app_home') }}">Trinity</a>
+
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">Menu
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav text-center">
+				<li class="nav-item">
+					<a class="nav-link fs-5" href="{{ path('app_inscription') }}">Qui veut ?</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link fs-5" href="{{ path('app_listing') }}">Listing</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link fs-5" href="{{ path('app_organisation') }}">Organisation</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link fs-5" href="{{ path('app_propositions') }}">Propositions</a>
+				</li>
+			</ul>
+		</div>
+
 	</div>
-</div>
+</nav>
