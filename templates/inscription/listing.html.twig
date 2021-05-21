@@ -4,8 +4,9 @@
 
 {% block body %}
 
-	<main class="position-absolute top-50 start-50 translate-middle p-4 bg-body rounded">
-
+<div class="row">
+	<div class="col-10 m-auto">
+	
 		<h1>Voici la liste des participants</h1>
 
 		<table class="table table-lg table-stripped table-hover mt-4">
@@ -30,7 +31,9 @@
 				{% endfor %}
 			</tbody>
 		</table>
-
+	
 	</div>
+</div>
+	
 
-</main>{% endblock %}
+{% endblock %}
