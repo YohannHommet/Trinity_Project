@@ -6,16 +6,15 @@
 
 	{% include '_partials/_flash_messages.html.twig' %}
 
+<div class="row" style="margin-top: 5rem">
+	<div class="col-10 m-auto">
 
-	<main class="">
+		<h1 class="text-center mb-5 text-dark fw-bold">Tu souhaites faire une proposition pour une soirée, une activité, du covoiturage,... ?</h1>
 
 		<div class="row">
-			<div class="col bg-white mb-4 shadow-sm">
-				<h1>Tu souhaites faire une proposition pour une soirée, une activité, du covoiturage,... ?</h1>
+			<div class="col-10 bg-white mb-5 shadow m-auto">
 
-				<p>C'est ici qu'il faut le poster</p>
-
-				<table class="table table-lg table-stripped table-hover mt-4">
+				<table class="table table-md table-stripped table-hover mt-4">
 					<thead class="" style="background-color: #393939; color: white;">
 						<tr class="">
 							<th scope="col">Prénom</th>
@@ -40,14 +39,13 @@
 			</div>
 		</div>
 
-
-		{# TODO FORM #}
-
 		<div class="row">
-			<div class="col">
+			<div class="col-10 m-auto">
 
-                <div class="card shadow-sm p-3">
+                <div class="card shadow p-3">
                     {{ form_start(formProposition) }}
+
+					<h4 class="text-center mb-4 mt-2">C'est ici qu'il faut le poster</h4>
 
                     <div class="row">
                         <div class="col">
@@ -65,7 +63,7 @@
                             {{ form_row(formProposition.note) }}
                         </div>
                     </div>
-                    <div class="text-center my-3">
+                    <div class="text-center mb-2 mt-3">
                         <button type="submit" class="btn btn-primary">J'envoie la sauce</button>
                     </div>
 
@@ -74,7 +72,7 @@
 			</div>
 		</div>
 
-
-	</main>
+	</div>
+</div>
 
 {% endblock %}
