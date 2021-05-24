@@ -4,87 +4,82 @@
 
 {% block body %}
 
-	{% include '_partials/_flash_messages.html.twig' %}
+    {% include '_partials/_flash_messages.html.twig' %}
 
-<div class="row" style="margin-top: 5rem">
-    <div class="col-10 m-auto">
-    
-    	<h1 class="text-center mb-5 text-dark fw-bold">Commençons par le début</h1>
-
-		<div class="row">
-			<div class="col-10 m-auto">
-
-                <div class="card shadow border-dark rounded-0 p-4">
-
-                    <div class="row mt-2 mb-5">
-                        <div class="col">
-                            <h4 class="text-center">Si vous êtes intéressés par un apéro géant entre les membres de la promo, ajoutez vos coordonnées pour qu'on puisse organiser tout ça :)</h4>
-                        </div>
-                    </div>
-
-                    {{ form_start(form) }}
-                    <div class="row mb-3">
-                        <div class="col">
-                            {{ form_row(form.firstname)}}
-                        </div>
-                        <div class="col">
-                            {{ form_row(form.lastname)}}
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col">
-                            {{ form_row(form.email)}}
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col">
-                            {{ form_row(form.phone)}}
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col">
-                            {{ form_row(form.adress)}}
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col">
-                            {{ form_row(form.cp)}}
-                        </div>
-                        <div class="col">
-                            {{ form_row(form.city)}}
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col">
-                            {{ form_row(form.department)}}
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col">
-                            {{ form_row(form.note)}}
-                        </div>
-                    </div>
-
-                    <small><em>* Champs requis</em></small>
-
-                    <div class="mb-3 mt-4 text-center">
-					    <button class="btn btn-primary px-5" type='submit'>envoyer</button>
-                    </div>
-					{{ form_end(form) }}
-
-
-
-				</div>
-			</div>
-
-
-		</div>
-    
+    <div class="row" style="margin-top: 5rem">
+        <div class="col-10 m-auto">
+            <h1 class="text-center mb-5 text-dark fw-bold">Commençons par le début</h1>
+        </div>
     </div>
-</div>
 
-	
+    <div class="row">
+        <div class="col-10 m-auto">
 
-	</main>
+            <div class="card shadow border-dark rounded-0 p-4">
+
+                <div class="row mt-2 mb-5">
+                    <div class="col">
+                        <h4 class="text-center">Si vous êtes intéressés par un apéro géant entre les membres de la
+                            promo, ajoutez vos coordonnées pour qu'on puisse organiser tout ça :)</h4>
+                    </div>
+                </div>
+
+                {{ form_start(form) }}
+                <div class="row mb-3">
+                    <div class="col">
+                        {{ form_row(form.firstname) }}
+                    </div>
+                    <div class="col">
+                        {{ form_row(form.lastname) }}
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        {{ form_row(form.email) }}
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        {{ form_row(form.phone) }}
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        {{ form_row(form.adress) }}
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        {{ form_row(form.cp) }}
+                    </div>
+                    <div class="col">
+                        {{ form_row(form.city) }}
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        {{ form_row(form.department) }}
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        {{ form_row(form.note) }}
+                    </div>
+                </div>
+
+                <small><em>* Champs requis</em></small>
+
+                <div class="mb-3 mt-4 text-center">
+                    <button class="btn btn-primary px-5" type='submit'>envoyer</button>
+                </div>
+                {{ form_end(form) }}
+
+
+            </div>
+        </div>
+
+
+    </div>
+
 
 {% endblock %}

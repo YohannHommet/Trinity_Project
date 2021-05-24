@@ -4,75 +4,75 @@
 
 {% block body %}
 
-	{% include '_partials/_flash_messages.html.twig' %}
+    {% include '_partials/_flash_messages.html.twig' %}
 
-<div class="row" style="margin-top: 5rem">
-	<div class="col-10 m-auto">
+    <div class="row" style="margin-top: 5rem">
+        <div class="col-10 m-auto">
+            <h1 class="text-center mb-5 text-dark fw-bold">Tu souhaites faire une proposition pour une soirée, une
+                activité, du covoiturage,... ?</h1>
+        </div>
+    </div>
 
-		<h1 class="text-center mb-5 text-dark fw-bold">Tu souhaites faire une proposition pour une soirée, une activité, du covoiturage,... ?</h1>
+    <div class="row mb-5">
+        <div class="col-10 bg-white shadow m-auto">
 
-		<div class="row">
-			<div class="col-10 bg-white mb-5 shadow m-auto">
+            <table class="table table-sm table-stripped table-hover mt-4">
+                <thead class="" style="background-color: #393939; color: white;">
+                <tr class="">
+                    <th scope="col">Prénom</th>
+                    <th scope="col">Ville</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Remarques</th>
+                </tr>
+                </thead>
 
-				<table class="table table-md table-stripped table-hover mt-4">
-					<thead class="" style="background-color: #393939; color: white;">
-						<tr class="">
-							<th scope="col">Prénom</th>
-							<th scope="col">Ville</th>
-							<th scope="col">Date</th>
-							<th scope="col">Remarques</th>
-						</tr>
-					</thead>
-					<tbody>
-						{% for proposition in propositionList %}
-							<tr>
-								<td>{{ proposition.firstname }}</td>
-								<td>{{ proposition.city }}</td>
-								<td>{{ proposition.date | date('d/m/Y') }}</td>
-								<td>{{ proposition.note }}</td>
-							</tr>
-						{% endfor %}
-					</tbody>
-				</table>
+                <tbody>
+                {% for proposition in propositionList %}
+                    <tr>
+                        <td>{{ proposition.firstname }}</td>
+                        <td>{{ proposition.city }}</td>
+                        <td>{{ proposition.date | date('d/m/Y') }}</td>
+                        <td>{{ proposition.note }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
 
+        </div>
+    </div>
 
-			</div>
-		</div>
+    <div class="row">
+        <div class="col-10 m-auto">
 
-		<div class="row">
-			<div class="col-10 m-auto">
+            <div class="card shadow border-dark rounded-0 p-3">
+                {{ form_start(formProposition) }}
 
-                <div class="card shadow p-3">
-                    {{ form_start(formProposition) }}
+                <h4 class="text-center mb-4 mt-2">C'est ici qu'il faut le poster</h4>
 
-					<h4 class="text-center mb-4 mt-2">C'est ici qu'il faut le poster</h4>
-
-                    <div class="row">
-                        <div class="col">
-                             {{ form_row(formProposition.firstname) }}
-                        </div>
-                        <div class="col">
-                            {{ form_row(formProposition.city) }}
-                        </div>
-                        <div class="col">
-                            {{ form_row(formProposition.date) }}
-                        </div>
+                <div class="row">
+                    <div class="col">
+                        {{ form_row(formProposition.firstname) }}
                     </div>
-                    <div class="row">
-                        <div class="col">
-                            {{ form_row(formProposition.note) }}
-                        </div>
+                    <div class="col">
+                        {{ form_row(formProposition.city) }}
                     </div>
-                    <div class="text-center mb-2 mt-3">
-                        <button type="submit" class="btn btn-primary">J'envoie la sauce</button>
+                    <div class="col">
+                        {{ form_row(formProposition.date) }}
                     </div>
-
-                    {{ form_end(formProposition) }}            
                 </div>
-			</div>
-		</div>
+                <div class="row">
+                    <div class="col">
+                        {{ form_row(formProposition.note) }}
+                    </div>
+                </div>
+                <div class="text-center mb-2 mt-3">
+                    <button type="submit" class="btn btn-primary">J'envoie la sauce</button>
+                </div>
 
-	</div>
-</div>
+                {{ form_end(formProposition) }}
+            </div>
+        </div>
+    </div>
+
 
 {% endblock %}

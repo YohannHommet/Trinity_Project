@@ -5,19 +5,39 @@
 }
 
 
-#container {
-
-}
-
 #main {
     background: url(../img/background.jpg) no-repeat center center;
     background-size: cover;
     min-width: 100vw;
     min-height: 100vh;
     overflow: hidden;
-}
-h1 {
-
+    position: relative;
 }
 
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 
+}
+
+.footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer ul li {
+    list-style: none;
+}
+
+.footer ul li a {
+    color: white;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+.footer ul li a:hover {
+    color: #dbdbdb;
+}
