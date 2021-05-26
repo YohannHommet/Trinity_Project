@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a5afb34034b952554ebf533dc2ffb67d",
+    "content-hash": "6db1d7e6875ecd7f71a17e164b4a7e35",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -153,16 +153,16 @@
         },
         {
             "name": "doctrine/cache",
-            "version": "2.0.2",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "14e0af5ba34a53c96c042c21aac1b0582d8f216b"
+                "reference": "c9622c6820d3ede1e2315a6a377ea1076e421d88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/14e0af5ba34a53c96c042c21aac1b0582d8f216b",
-                "reference": "14e0af5ba34a53c96c042c21aac1b0582d8f216b",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/c9622c6820d3ede1e2315a6a377ea1076e421d88",
+                "reference": "c9622c6820d3ede1e2315a6a377ea1076e421d88",
                 "shasum": ""
             },
             "require": {
@@ -232,7 +232,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/cache/issues",
-                "source": "https://github.com/doctrine/cache/tree/2.0.2"
+                "source": "https://github.com/doctrine/cache/tree/2.0.3"
             },
             "funding": [
                 {
@@ -248,7 +248,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-20T15:07:13+00:00"
+            "time": "2021-05-25T09:43:04+00:00"
         },
         {
             "name": "doctrine/collections",
@@ -1198,16 +1198,16 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "2.9.0",
+            "version": "2.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/orm.git",
-                "reference": "99d67cb77d3626c52f4d5feb5caed58948ea5577"
+                "reference": "f3e55fae9fdbdbc23897006bdbf016c20e11f6e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/orm/zipball/99d67cb77d3626c52f4d5feb5caed58948ea5577",
-                "reference": "99d67cb77d3626c52f4d5feb5caed58948ea5577",
+                "url": "https://api.github.com/repos/doctrine/orm/zipball/f3e55fae9fdbdbc23897006bdbf016c20e11f6e9",
+                "reference": "f3e55fae9fdbdbc23897006bdbf016c20e11f6e9",
                 "shasum": ""
             },
             "require": {
@@ -1284,9 +1284,9 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/orm/issues",
-                "source": "https://github.com/doctrine/orm/tree/2.9.0"
+                "source": "https://github.com/doctrine/orm/tree/2.9.1"
             },
-            "time": "2021-05-21T07:15:28+00:00"
+            "time": "2021-05-24T15:54:12+00:00"
         },
         {
             "name": "doctrine/persistence",

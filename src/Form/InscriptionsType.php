@@ -18,32 +18,25 @@ class InscriptionsType extends AbstractType
     {
         $builder
             ->add('firstname', TextType::class, [
-                'label' => 'Prénom *',
-                'required' => true
+                'label' => 'Prénom',
+                'required' => true,
+                'disabled' => true
             ])
             ->add('lastname', TextType::class, [
-                'label' => 'Nom *'
+                'label' => 'Nom',
+                'required' => true,
+                'disabled' => true
             ])
             ->add('email', EmailType::class, [
-                'label' => "Votre email *",
-                'help' => "* l'email restera confidentiel"
-            ])
-            ->add('phone', TelType::class, [
-                'label' => "Téléphone *",
-                'help' => "* le numéro restera confidentiel"
-            ])
-            ->add('adress', TextType::class, [
-                'label' => "Votre adresse",
-                'help' => "* l'adresse restera confidentielle"
-            ])
-            ->add('cp', IntegerType::class, [
-                'label' => "Votre Code Postal *",
+                'label' => "Email",
+                'required' => true,
+                'disabled' => true,
+                'help' => "l'email restera confidentiel"
             ])
             ->add('city', TextType::class, [
-                'label' => "Votre Ville *",
-            ])
-            ->add('department', TextType::class, [
-                'label' => "Votre département *",
+                'label' => "Ville",
+                'required' => true,
+                'disabled' => true
             ])
             ->add('note', TextareaType::class, [
                 'label' => "Remarques",

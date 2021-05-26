@@ -4,11 +4,11 @@ namespace App\Form;
 
 use App\Entity\Propositions;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Form\Extension\Core\Type\DateType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class PropositionsType extends AbstractType
 {
@@ -18,8 +18,11 @@ class PropositionsType extends AbstractType
             ->add('firstname', TextType::class, [
                 'label' => 'Ton prénom'
             ])
+            ->add('lastname', TextType::class, [
+                'label' => 'Ton nom'
+            ])
             ->add('city', TextType::class, [
-        'label' => 'Ta ville '
+                'label' => 'Ta ville '
             ])
             ->add('date', DateType::class, [
                 'html5' => true,
