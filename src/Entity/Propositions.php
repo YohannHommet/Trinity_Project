@@ -32,16 +32,19 @@ class Propositions
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\NotBlank()
      */
     private ?string $city;
 
     /**
      * @ORM\Column(type="datetime", nullable=true)
+     * @Assert\NotBlank()
      */
     private ?\DateTimeInterface $date;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\NotBlank()
      */
     private ?string $note;
 
@@ -59,7 +62,6 @@ class Propositions
     public function setFirstname(?string $firstname): self
     {
         $this->firstname = $firstname;
-
         return $this;
     }
 
@@ -68,9 +70,10 @@ class Propositions
     {
         return $this->lastname;
     }
-    public function setLastname(?string $lastname): void
+    public function setLastname(?string $lastname): self
     {
         $this->lastname = $lastname;
+        return $this;
     }
 
 
@@ -81,7 +84,6 @@ class Propositions
     public function setCity(?string $city): self
     {
         $this->city = $city;
-
         return $this;
     }
 
@@ -93,7 +95,6 @@ class Propositions
     public function setDate(?\DateTimeInterface $date): self
     {
         $this->date = $date;
-
         return $this;
     }
 
@@ -105,7 +106,6 @@ class Propositions
     public function setNote(?string $note): self
     {
         $this->note = $note;
-
         return $this;
     }
 

@@ -44,6 +44,7 @@ class Inscriptions
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @Assert\NotBlank()
      */
     private ?string $note;
 
@@ -61,7 +62,6 @@ class Inscriptions
     public function setFirstname(?string $firstname): self
     {
         $this->firstname = $firstname;
-
         return $this;
     }
 
@@ -73,7 +73,6 @@ class Inscriptions
     public function setLastname(?string $lastname): self
     {
         $this->lastname = $lastname;
-
         return $this;
     }
 
@@ -85,7 +84,6 @@ class Inscriptions
     public function setEmail(?string $email): self
     {
         $this->email = $email;
-
         return $this;
     }
 
@@ -97,7 +95,6 @@ class Inscriptions
     public function setCity(?string $city): self
     {
         $this->city = $city;
-
         return $this;
     }
 
@@ -109,7 +106,7 @@ class Inscriptions
     public function setNote(?string $note): self
     {
         $this->note = $note;
-
         return $this;
     }
+
 }

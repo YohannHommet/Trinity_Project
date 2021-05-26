@@ -25,12 +25,12 @@
                 </thead>
 
                 <tbody>
-                {% for user in list %}
+                {% for userList in list %}
                     <tr>
-                        <td>{{ user.firstname }}</td>
-                        <td>{{ user.lastname }}</td>
-                        <td>{{ user.city }}</td>
-                        <td>{{ user.note }}</td>
+                        <td>{{ userList.firstname }}</td>
+                        <td>{{ userList.lastname }}</td>
+                        <td>{{ userList.city }}</td>
+                        <td>{{ userList.note }}</td>
                     </tr>
                 {% endfor %}
                 </tbody>

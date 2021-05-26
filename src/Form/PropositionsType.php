@@ -12,17 +12,23 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class PropositionsType extends AbstractType
 {
-    public function buildForm(FormBuilderInterface $builder, array $options)
+    public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
             ->add('firstname', TextType::class, [
-                'label' => 'Ton prénom'
+                'label' => 'Prénom',
+                'required' => true,
+                'disabled' => true
             ])
             ->add('lastname', TextType::class, [
-                'label' => 'Ton nom'
+                'label' => 'Nom',
+                'required' => true,
+                'disabled' => true
             ])
             ->add('city', TextType::class, [
-                'label' => 'Ta ville '
+                'label' => 'Ta ville ',
+                'required' => true,
+                'disabled' => true
             ])
             ->add('date', DateType::class, [
                 'html5' => true,
@@ -31,14 +37,16 @@ class PropositionsType extends AbstractType
                 // 'input_format' => 'd/m/YY',
                 'label' => "Date où t'es dispo",
                 'attr' => ['class' => 'mb-2'],
+                'required' => true
 
             ])
             ->add('note', TextareaType::class, [
                 'label' => "Remarques",
+                'required' => true
             ]);
     }
 
-    public function configureOptions(OptionsResolver $resolver)
+    public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
             'data_class' => Propositions::class,

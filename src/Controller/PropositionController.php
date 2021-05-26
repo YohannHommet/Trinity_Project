@@ -19,6 +19,7 @@ class PropositionController extends AbstractController
      * @param Request $request
      * @param EntityManagerInterface $em
      * @param PropositionsRepository $propositionsRepository
+     *
      * @return Response
      */
     public function index(Request $request, EntityManagerInterface $em, PropositionsRepository $propositionsRepository): Response

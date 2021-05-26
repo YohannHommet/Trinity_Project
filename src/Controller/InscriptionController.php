@@ -25,7 +25,6 @@ class InscriptionController extends AbstractController
         $inscriptions = new Inscriptions();
         
         $form = $this->createForm(InscriptionsType::class, $inscriptions);
-
         $form->handleRequest($request);
         
         if($form->isSubmitted() && $form->isValid()) {
